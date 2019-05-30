@@ -40,6 +40,7 @@ namespace PeopleSearchApplication.Controllers
         }
 
         // PUT: api/People/5
+        [Route("id/people")]
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutPeople(int id, People people)
         {
@@ -75,6 +76,8 @@ namespace PeopleSearchApplication.Controllers
         }
 
         // POST: api/People
+        [HttpPost]
+        [Route("people")]
         [ResponseType(typeof(People))]
         public async Task<IHttpActionResult> PostPeople(People people)
         {
@@ -86,10 +89,13 @@ namespace PeopleSearchApplication.Controllers
             db.People.Add(people);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = people.Id }, people);
+            //return CreatedAtRoute("people", new { id = people.Id }, people);
+            return Ok(people);
         }
 
         // DELETE: api/People/5
+        [HttpDelete]
+        [Route("{id}")]
         [ResponseType(typeof(People))]
         public async Task<IHttpActionResult> DeletePeople(int id)
         {

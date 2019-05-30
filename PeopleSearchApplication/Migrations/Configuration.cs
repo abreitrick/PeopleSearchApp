@@ -10,7 +10,7 @@ namespace PeopleSearchApplication.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(PeopleSearchApplication.Models.PeopleSearchApplicationContext context)
@@ -29,10 +29,10 @@ namespace PeopleSearchApplication.Migrations
             //
 
         context.People.AddOrUpdate(new People[] {
-        new People() { Id = 1, Name = "Robinson, Steve", StreetAddress="11 Main Street", City="Fond du Lac", State="Wisconsin", Zip="54935", Age=27, Interests="Sports, Hiking, Swimming", Image=" " },
-        new People() { Id = 2, Name = "Smith, Sherry", StreetAddress="332 7th Street", City="Fond du Lac", State="Wisconsin", Zip="54935", Age=24, Interests="Video games, Hiking", Image=" "  },
-        new People() { Id = 3, Name = "Rull, Haley", StreetAddress="454 Jackson Avenue", City="New York", State="New York", Zip="88929", Age=33, Interests="Sports, Traveling", Image=" "  },
-        new People() { Id = 4, Name = "Burg, Peter", StreetAddress="89 Johnson Street", City="Miami", State="Florida", Zip="82800", Age=47, Interests="Swimming, Baseball", Image=" "  }
+        new People() { Id = 1, FirstName = "Steve", LastName="Robinson", StreetAddress="11 Main Street", City="Fond du Lac", State="Wisconsin", Zip="54935", Age=27, Interests="Sports, Hiking, Swimming", Image=null},
+        new People() { Id = 2, FirstName = "Sherry", LastName="Smith", StreetAddress="332 7th Street", City="Fond du Lac", State="Wisconsin", Zip="54935", Age=24, Interests="Video games, Hiking", Image=null},
+        new People() { Id = 3, FirstName = "Haley", LastName="Rull", StreetAddress="454 Jackson Avenue", City="New York", State="New York", Zip="88929", Age=33, Interests="Sports, Traveling", Image=null},
+        new People() { Id = 4, FirstName = "Peter", LastName="Burg", StreetAddress="89 Johnson Street", City="Miami", State="Florida", Zip="82800", Age=47, Interests="Swimming, Baseball", Image=null}
         });
 
         
